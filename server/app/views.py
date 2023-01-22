@@ -1,4 +1,3 @@
-
 import os
 from app import auth, db
 from app.models import Task
@@ -11,6 +10,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 KEY=str(os.getenv('KEY'))
 load_dotenv('../.env')
+KEY="asdfghjklqwertyuiopzxcvb"
 
 users = {
     "Shamas": generate_password_hash("admin123"),
