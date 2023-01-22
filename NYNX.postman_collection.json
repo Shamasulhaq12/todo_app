@@ -1,0 +1,6683 @@
+{
+	"info": {
+		"_postman_id": "ab1d3357-614a-423c-9137-667a3920ab1a",
+		"name": "NYNX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24407541"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Is Account Active",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"mohsin12606@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}api/auth/is/account/active/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"auth",
+								"is",
+								"account",
+								"active",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username_or_email\": \"sameerjahangier99@gmail.com\",\n    \"password\": \"Sameer@12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://production.nynxcreatives.com/api/auth/login/",
+							"protocol": "https",
+							"host": [
+								"production",
+								"nynxcreatives",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username_or_email\":\"mohsin@mohsin.com\",\n    \"password\": \"123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/auth/login/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"auth",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 12 Aug 2022 09:29:22 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.6.9"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "197"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6Im1vaHNpbiIsImV4cCI6MTY2MDI5Njg2MiwiZW1haWwiOiJtb2hzaW5AbW9oc2luLmNvbSJ9.1YCmiLlyGSmxmlpU0e4j4LyZQQx6RkYXNlcJiVUeJk8\"\n}"
+						}
+					]
+				},
+				{
+					"name": "To Check Email Exists Or Not",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"mohsin12606@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}api/auth/is/email/exists/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"auth",
+								"is",
+								"email",
+								"exists",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"sssaaszxzxz@gmail.com\",\n    \"password\": \"asdf1122\",\n    \"username\": \"sszxzxzsss\",\n    \"is_buyer\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}api/auth/register/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"auth",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activate User Account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}api/auth/activate/account/N286EZZNGWEHVIUZA8P104J6LPWXVSELVKLIRTWAOGAZYSA85S",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"auth",
+								"activate",
+								"account",
+								"N286EZZNGWEHVIUZA8P104J6LPWXVSELVKLIRTWAOGAZYSA85S"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forget Your Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"email\": \"dev.beyonderissolutions@gmail.com\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}api/auth/forgot/password/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"auth",
+								"forgot",
+								"password",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"activation_key\": \"f9PRL6mA8tdLz6QVCi0x0plVLqkRsm\",\n    \"password\": \"Brain606#\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}api/auth/reset/password/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"auth",
+								"reset",
+								"password",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Change Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0OSwidXNlcm5hbWUiOiJzYW1lZXIgamFoYW5naWVyIiwiZXhwIjoxNjY0NDQ3OTYyLCJlbWFpbCI6InNhbWVlcmphaGFuZ2llcjk5QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjYxODU1OTYyfQ.WUksfCyJqd19MELftX8gNvqNLMegSVGWR1HlttbUYQo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"current_password\":\"Brain606#\",\n    \"new_password\": \"Brain606#\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}api/auth/change/password/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"auth",
+								"change",
+								"password",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}api/auth/user/detail/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"auth",
+								"user",
+								"detail",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Detail Public API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}api/auth/user/detail/1/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"auth",
+								"user",
+								"detail",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deactivate account",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}api/auth/change/account/status/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"auth",
+								"change",
+								"account",
+								"status",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activate Account Again",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}api/auth/activate/account/again/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImZhaXphbiIsImV4cCI6MTY2NTQwNDYyMSwiZW1haWwiOiJmYWl6YW4ubWVvMTc5QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjY1NDA0NTAxfQ.53w-mV1v0xhE6210ZKG74CDwsCZMXSSkS35E_SRrViQ/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"auth",
+								"activate",
+								"account",
+								"again",
+								"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImZhaXphbiIsImV4cCI6MTY2NTQwNDYyMSwiZW1haWwiOiJmYWl6YW4ubWVvMTc5QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjY1NDA0NTAxfQ.53w-mV1v0xhE6210ZKG74CDwsCZMXSSkS35E_SRrViQ",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resend account activation email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}api/auth/resend/account/activation/email/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImZhaXphbiIsImV4cCI6MTY2NTQwNDYyMSwiZW1haWwiOiJmYWl6YW4ubWVvMTc5QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjY1NDA0NTAxfQ.53w-mV1v0xhE6210ZKG74CDwsCZMXSSkS35E_SRrViQ/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"auth",
+								"resend",
+								"account",
+								"activation",
+								"email",
+								"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImZhaXphbiIsImV4cCI6MTY2NTQwNDYyMSwiZW1haWwiOiJmYWl6YW4ubWVvMTc5QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjY1NDA0NTAxfQ.53w-mV1v0xhE6210ZKG74CDwsCZMXSSkS35E_SRrViQ",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Skills",
+					"item": [
+						{
+							"name": "Add Skill",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Python\",\n    \"level\": \"I\",\n    \"profile\":4\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/profile/skill/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"skill",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Skill",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Python/Django\",\n    \"level\": \"I\" ,\n    \"profile\":4\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/profile/skill/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"skill",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Skill",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}api/profile/skill/2/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"skill",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Skill",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}api/profile/skill/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"skill",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Skills",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}api/profile/skill/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"skill",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Skill Education",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}api/profile/skill/education/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"skill",
+										"education",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Education",
+					"item": [
+						{
+							"name": "Add Education",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"institute\": \"GCUF\",\n    \"title\": \"Software Engineer\",\n    \"year\": \"2018\",\n    \"profile\":4\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/profile/education/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"education",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Education",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"institute\": \"GCUF/SE\",\n    \"title\": \"Software Engineer\",\n    \"year\": \"2018\",\n    \"profile\":4\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/profile/education/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"education",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Education",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"institute\": \"GCUF/SE\",\n    \"title\": \"Software Engineer\",\n    \"year\": \"2018\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/profile/education/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"education",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Education",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"institute\": \"GCUF/SE\",\n    \"title\": \"Software Engineer\",\n    \"year\": \"2018\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/profile/education/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"education",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Education",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"institute\": \"GCUF/SE\",\n    \"title\": \"Software Engineer\",\n    \"year\": \"2018\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/profile/education/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"education",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Social Media",
+					"item": [
+						{
+							"name": "Add Media",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"profile\": 1,\n    \"medias\":[\n        {\n            \"media\":1,\n            \"url\":\"https://url\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/profile/social/media/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"social",
+										"media",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Media",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"profile\": 1,\n    \"medias\":[\n        {\n            \"media\":1,\n            \"url\":\"https://urll\"\n        },\n        {\n            \"media\":2,\n            \"url\":\"https://urll\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/profile/social/media/2/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"social",
+										"media",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Media",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"media\": 2,\n    \"url\": \"mohsin1266@gmail.com\",\n    \"profile\":4\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/profile/social/media/7/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"social",
+										"media",
+										"7",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Media",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT {{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}api/profile/social/media/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"social",
+										"media",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Media",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"media\": 2,\n    \"url\": \"mohsin1266@gmail.com\",\n    \"profile\":4\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/profile/social/media/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"social",
+										"media",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Template",
+					"item": [
+						{
+							"name": "Add Template",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "profile",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "test title 3",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "test desc 3",
+											"type": "text"
+										},
+										{
+											"key": "images[0]image",
+											"type": "file",
+											"src": "/C:/Users/Mg/Desktop/AccountStatement (1).png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}api/profile/template/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"template",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Template",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{domain}}api/profile/template/?profile_id=1",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"template",
+										""
+									],
+									"query": [
+										{
+											"key": "profile_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Template",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "profile",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "test title 4",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "template 1 description",
+											"type": "text"
+										},
+										{
+											"key": "images[0]image",
+											"type": "file",
+											"src": "/C:/Users/Mg/Desktop/AccountStatement (1).png"
+										},
+										{
+											"key": "images[1]image",
+											"type": "file",
+											"src": "/C:/Users/Mg/Desktop/AccountStatement (1).png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}api/profile/template/18/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"template",
+										"18",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete template",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}api/profile/template/12/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"template",
+										"12",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete template image",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}api/profile/template/image/delete/13/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"template",
+										"image",
+										"delete",
+										"13",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Template",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{domain}}api/profile/template/4/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"template",
+										"4",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "tag_line",
+									"value": "It is test tag line 3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "It is test desc 3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Mg/Desktop/AccountStatement (1).png",
+									"disabled": true
+								},
+								{
+									"key": "location",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "Muhammad ",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "Faizan",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "company",
+									"value": "BES",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "03135399179",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "country",
+									"value": "Pakistan",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "time_zone",
+									"value": "Islamabad UTC-5",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "is_buyer",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}api/profile/update/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"profile",
+								"update",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Profile Response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"tag_line\": \"Example tag line\",\n    \"description\": \" description\",\n    \"image\": \"Image URL\",\n    \"location\": \"Faisalabad\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/profile/update/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"update",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 17 Aug 2022 13:30:53 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.6.9"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "PUT, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "326"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"is_active\": true,\n    \"activation_key\": \"f9PRL6mA8tdLz6QVCi0x0plVLqkRsm\",\n    \"is_link_expire\": true,\n    \"link_created_at\": \"2022-08-17T08:26:13.460741Z\",\n    \"role\": \"U\",\n    \"tag_line\": \"Example tag line\",\n    \"description\": \"description\",\n    \"image\": \"Image URL\",\n    \"location\": \"Faisalabad\",\n    \"created_at\": \"2022-08-16T10:17:31.494825Z\",\n    \"deleted\": false,\n    \"user\": 9\n}"
+						},
+						{
+							"name": "Update Profile Response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"tag_line\": \"Example tag line\",\n    \"description\": \" description\",\n    \"image\": \"Image URL\",\n    \"location\": \"Faisalabad\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/profile/update/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"profile",
+										"update",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 17 Aug 2022 13:30:53 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.6.9"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "PUT, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "326"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"is_active\": true,\n    \"activation_key\": \"f9PRL6mA8tdLz6QVCi0x0plVLqkRsm\",\n    \"is_link_expire\": true,\n    \"link_created_at\": \"2022-08-17T08:26:13.460741Z\",\n    \"role\": \"U\",\n    \"tag_line\": \"Example tag line\",\n    \"description\": \"description\",\n    \"image\": \"Image URL\",\n    \"location\": \"Faisalabad\",\n    \"created_at\": \"2022-08-16T10:17:31.494825Z\",\n    \"deleted\": false,\n    \"user\": 9\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Asset",
+			"item": [
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "Add Category",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Web Development\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/category/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"category",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Category",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Web\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/category/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"category",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Category",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Web\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/category/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"category",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Category",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Web\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/category/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"category",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Category",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Web\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/category/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"category",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Sub Category",
+					"item": [
+						{
+							"name": "Add Sub Category",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Django\",\n    \"category\":2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/subcategory/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"subcategory",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Sub Category",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Python/Django\",\n    \"category\":2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/subcategory/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"subcategory",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Sub Category",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Django\",\n    \"category\":2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/subcategory/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"subcategory",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Sub Category",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Django\",\n    \"category\":2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/subcategory/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"subcategory",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Sub Category",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Django\",\n    \"category\":2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/subcategory/?id=2",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"subcategory",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Attribute",
+					"item": [
+						{
+							"name": "Add Attribute",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"example\",\n    \"subcategory\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/attribute/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"attribute",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Attribute",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"test\",\n    \"subcategory\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/attribute/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"attribute",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Attribute",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"test\",\n    \"subcategory\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/attribute/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"attribute",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Attribute",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"test\",\n    \"subcategory\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/attribute/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"attribute",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Attribute",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"test\",\n    \"subcategory\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/attribute/?id=1",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"attribute",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Feature",
+					"item": [
+						{
+							"name": "Add Feature",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"subcategory\":4,\n    \"field_name\" : \"Extra 2\",\n    \"field_type\":\"checkbox\",\n    \"is_adhoc_feature\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/feature/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"feature",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Feature",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"test\",\n    \"subcategory\":2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/feature/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"feature",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Feature",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"test\",\n    \"subcategory\":2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/feature/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"feature",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Feature",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"test\",\n    \"subcategory\":2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/feature/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"feature",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Feature",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}api/asset/feature/?subcategory=4",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"feature",
+										""
+									],
+									"query": [
+										{
+											"key": "gig",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "subcategory",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Social Media",
+					"item": [
+						{
+							"name": "Add Media",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Google\",\n    \"icon\": \"google_icon_url\",\n    \"tag_line\": \"Keep your google in hand\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/media/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"media",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Media",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Google\",\n    \"icon\": \"google_icon_url\",\n    \"tag_line\": \"Keep your google in hand\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/media/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"media",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Media",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Facebook\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/media/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"media",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Media",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Facebook\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/media/1/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"media",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Media",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Google\",\n    \"icon\": \"google_icon_url\",\n    \"tag_line\": \"Keep your google in hand\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/asset/media/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"media",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Countries",
+					"item": [
+						{
+							"name": "List Countries",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}api/asset/list/countries/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"list",
+										"countries",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Load Countries",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}api/asset/load/countries/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"load",
+										"countries",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Country Timezones",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}api/asset/list/country/755/timezones/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"list",
+										"country",
+										"755",
+										"timezones",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Skill",
+					"item": []
+				},
+				{
+					"name": "Category & their Subcategories",
+					"item": [
+						{
+							"name": "Category & their Subcategories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}api/asset/category/and/subcategories/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"asset",
+										"category",
+										"and",
+										"subcategories",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Gig",
+			"item": [
+				{
+					"name": "Gig",
+					"item": [
+						{
+							"name": "Overview",
+							"item": [
+								{
+									"name": "Add Gig overview",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\":\"Gig Title\",\n    \"category\":2,\n    \"sub_category\":2,\n    \"attributes\": [\"wix\", \"rmeote\", \"blog\"],\n    \"search_tags\": [\n        {\n            \"tag\": \"Minimal Design\"\n        },\n        {\n            \"tag\": \"Retro\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/overview/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"overview",
+												""
+											],
+											"query": [
+												{
+													"key": "",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "",
+													"value": null,
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Gig overview",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\":\"Gig Title\",\n    \"category\":2,\n    \"sub_category\":2,\n    \"attributes\": [\"wix\", \"rmeote\", \"blog\"],\n    \"search_tags\": [\n        {\n            \"tag\": \"Minimal Design\"\n        },\n        {\n            \"tag\": \"Retro\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/overview/3",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"overview",
+												"3"
+											],
+											"query": [
+												{
+													"key": "",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "",
+													"value": null,
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Gig overview",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\":\"Gig Title\",\n    \"category\":2,\n    \"sub_category\":2,\n    \"attributes\": [\"wix\", \"rmeote\", \"blog\"],\n    \"search_tags\": [\n        {\n            \"tag\": \"Minimal Design\"\n        },\n        {\n            \"tag\": \"Retro\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/overview/2/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"overview",
+												"2",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Images",
+							"item": [
+								{
+									"name": "Add Gig Images",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "gig",
+													"value": "6",
+													"type": "text"
+												},
+												{
+													"key": "images[0]image",
+													"type": "file",
+													"src": "/C:/Users/Mg/Desktop/DRF Books/pic2.jpg"
+												},
+												{
+													"key": "images[0]is_main",
+													"value": "false",
+													"type": "text"
+												},
+												{
+													"key": "images[1]image",
+													"type": "file",
+													"src": "/C:/Users/Mg/Desktop/DRF Books/pic1.jpg"
+												},
+												{
+													"key": "images[1]is_main",
+													"value": "true",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/images/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"images",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Gig Images",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "gig",
+													"value": "2",
+													"type": "text"
+												},
+												{
+													"key": "images[0]image",
+													"type": "file",
+													"src": "/C:/Users/Mg/Desktop/cover_1661591921shadd.jpg"
+												},
+												{
+													"key": "images[0]is_main",
+													"value": "true",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/images/2/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"images",
+												"2",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Gig Images",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/images/?id=22132",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"images",
+												""
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "22132"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Gig Images",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/images/1/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"images",
+												"1",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "FAQ",
+							"item": [
+								{
+									"name": "Add Gig FAQ",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"gig\": 6,\n    \"description\": \"test desc\",\n    \"faq\":[\n        {\n            \"question\":\"Question 1\",\n            \"answer\":\"Answer 1\"\n        },\n        {\n            \"question\":\"Question 2\",\n            \"answer\":\"Answer 2\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/faq/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"faq",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Gig FAQ",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"gig\": 2,\n    \"description\": \"test desc updated\",\n    \"faq\":[\n        {\n            \"question\":\"Are you ok upd\",\n            \"answer\":\"I'm good\"\n        },\n        {\n            \"question\":\"https://url upd\",\n            \"answer\":\"Yoyo\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/faq/2/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"faq",
+												"2",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Gig FAQ",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/faq/?id=2",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"faq",
+												""
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Gig FAQ",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/faq/1/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"faq",
+												"1",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Search Terms",
+							"item": [
+								{
+									"name": "Add Gig Search Terms",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"gig\": 2,\n    \"terms\":[\n        {\n            \"term\":\"Ubuntu\"\n        },\n        {\n            \"term\":\"Python\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/search/term/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"search",
+												"term",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Gig Search Terms",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"gig\": 2,\n    \"terms\":[\n        {\n            \"term\":\"Server\"\n        },\n        {\n            \"term\":\"Django\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/search/term/2/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"search",
+												"term",
+												"2",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Gig Search Terms",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/search/term/?id=2",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"search",
+												"term",
+												""
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Gig Search Term",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/search/term/1/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"search",
+												"term",
+												"1",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Requirements",
+							"item": [
+								{
+									"name": "Add Gig Requirements",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"gig\": 6,\n    \"requirements\":[\n        {\n            \"requirement\":\"Ubuntu\",\n            \"is_mandatory\":true\n        },\n        {\n            \"requirement\":\"Database\",\n            \"is_mandatory\":false\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/requirement/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"requirement",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Gig Requirement",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"gig\": 2,\n    \"requirements\":[\n        {\n            \"requirement\":\"Lnux\",\n            \"is_mandatory\":true\n        },\n        {\n            \"requirement\":\"Database\",\n            \"is_mandatory\":false\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/requirement/2/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"requirement",
+												"2",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Gig Requirement",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/requirement/?id=2",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"requirement",
+												""
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Gig Requirement",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/requirement/1/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"requirement",
+												"1",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Features",
+							"item": [
+								{
+									"name": "Add Gig Feature",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"gig\": 6,\n    \"is_adhoc\": true,\n    \"is_adhoc_three_tire\": true,\n    \"is_monthly\": true,\n    \"is_monthly_three_tire\": true,\n    \"features\":[\n        {\n            \"feature\": 3,\n            \"basic\": \"Custom Title basic\",\n            \"standard\": \"Custom Title standard\",\n            \"premium\": \"Custom Title premium\"\n        },\n        {\n            \"feature\": 4,\n            \"basic\": \"Custom Description Basic\",\n            \"standard\": \"Custom Description standard\",\n            \"premium\": \"Custom Description premium\"\n        },\n        {\n            \"feature\": 5,\n            \"basic\": \"1.00\",\n            \"standard\": \"5.00\",\n            \"premium\": \"3.00\"\n        },\n        {\n            \"feature\": 6,\n            \"basic\": \"1\",\n            \"standard\": \"3\",\n            \"premium\": \"3\"\n        },\n        {\n            \"feature\": 7,\n            \"basic\": \"1\",\n            \"standard\": \"3\",\n            \"premium\": \"3\"\n        },\n        {\n            \"feature\": 8,\n            \"basic\": \"true\",\n            \"standard\": null,\n            \"premium\": \"true\"\n        },\n        {\n            \"feature\": 9,\n            \"basic\": \"true\",\n            \"standard\": \"false\",\n            \"premium\": \"true\"\n        },\n        {\n            \"feature\": 10,\n            \"basic\": \"100\",\n            \"standard\": \"200\",\n            \"premium\": \"300\"\n        },\n        {\n            \"basic\": \"true\",\n            \"standard\": \"false\",\n            \"premium\": \"false\",\n            \"is_custom\":{\n                \"profile\": 8,\n                \"gig\": 2,\n                \"subcategory\":4,\n                \"field_name\" : \"Extra 1\",\n                \"field_type\":\"checkbox\",\n                \"is_adhoc_feature\": true,\n                \"is_custom_field\": true\n            }\n        },\n        {\n            \"basic\": \"true\",\n            \"standard\": \"false\",\n            \"premium\": \"true\",\n            \"is_custom\":{\n                \"profile\": 8,\n                \"gig\": 2,\n                \"subcategory\":4,\n                \"field_name\" : \"Extra 2\",\n                \"field_type\":\"checkbox\",\n                \"is_adhoc_feature\": true\n            }\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/feature/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"feature",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Gig Feature",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"gig\": 2,\n    \"is_adhoc\": false,\n    \"is_adhoc_three_tire\": false,\n    \"is_monthly\": true,\n    \"is_monthly_three_tire\": true,\n    \"features\":[\n        {\n            \"feature\": 3,\n            \"basic\": \"10\",\n            \"standard\": \"20\",\n            \"premium\": \"premium\"\n        },\n        {\n            \"feature\": 4,\n            \"basic\": \"Basic Description\",\n            \"standard\": \"standard Description\",\n            \"premium\": \"premium Description\"\n        },\n        {\n            \"feature\": 5,\n            \"basic\": \"10\",\n            \"standard\": \"5\",\n            \"premium\": \"3\"\n        },\n        {\n            \"basic\": 10,\n            \"standard\": \"5\",\n            \"premium\": \"3\",\n            \"is_custom\":{\n                \"profile\": 1,\n                \"gig\": 2,\n                \"subcategory\":4,\n                \"field_name\" : \"Extra 1\",\n                \"field_type\":\"checkbox\",\n                \"is_adhoc_feature\": true,\n                \"is_custom_field\": true\n            }\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/feature/2/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"feature",
+												"2",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Gig Feature",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/feature/?id=2",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"feature",
+												""
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Gig Feature",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/feature/4/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"feature",
+												"4",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "Gig Price",
+							"item": [
+								{
+									"name": "Add Gig Price",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"gig\":2,\n    \"basic_price\":100,\n    \"standard_price\":150,\n    \"premium_price\":200\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/price/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"price",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Gig Price",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"gig\":2,\n    \"basic_price\":90,\n    \"standard_price\":150,\n    \"premium_price\":200\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/price/1/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"price",
+												"1",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Gig Price",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/price/?id=2",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"price",
+												""
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Gig Price",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "{{token}}"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/price/1/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"price",
+												"1",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Gig Delete",
+							"item": [
+								{
+									"name": "Delete Gig",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/overview/1/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"overview",
+												"1",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Gig List & Details",
+							"item": [
+								{
+									"name": "Gig Detail",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{domain}}api/gig/2/detail/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"2",
+												"detail",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Gig List",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/user/gig/list/?id=1&status=completed",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"user",
+												"gig",
+												"list",
+												""
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "1"
+												},
+												{
+													"key": "status",
+													"value": "completed"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Subcategory Gigs List",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/subcategory/2/gigs/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"subcategory",
+												"2",
+												"gigs",
+												""
+											],
+											"query": [
+												{
+													"key": "status",
+													"value": "completed",
+													"disabled": true
+												},
+												{
+													"key": "profile_id",
+													"value": "1",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Client Requirements Description Details",
+							"item": [
+								{
+									"name": "get requirements from client",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/requirment/answer/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"requirment",
+												"answer",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete requirement from client",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/gig/requirment/answer/3/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"requirment",
+												"answer",
+												"3",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "add requirements from client",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "profile",
+													"value": "12",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "attachments[0]attachment",
+													"type": "file",
+													"src": "/home/bes/Pictures/Screenshots/Screenshot from 2022-11-16 14-01-24.png"
+												},
+												{
+													"key": "requirement",
+													"value": "237",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "aswasasacvbnm,.",
+													"type": "text"
+												},
+												{
+													"key": "attachments[2]attachment",
+													"type": "file",
+													"src": "/home/bes/Pictures/Screenshots/Screenshot from 2022-11-16 14-01-01.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/requirment/answer/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"requirment",
+												"answer",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update client requirements from client",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "profile",
+													"value": "12",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "attachments[0]attachment",
+													"type": "file",
+													"src": "/home/bes/Pictures/Screenshots/Screenshot from 2022-11-18 16-36-35.png"
+												},
+												{
+													"key": "requirement",
+													"value": "237",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "aswasasacvbnm,.",
+													"type": "text"
+												},
+												{
+													"key": "attachments[2]attachment",
+													"type": "file",
+													"src": "/home/bes/Pictures/Screenshots/Screenshot from 2022-11-16 14-01-24.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}api/gig/requirment/answer/4/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"gig",
+												"requirment",
+												"answer",
+												"4",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Client Direct Hire Freelancer",
+					"item": [
+						{
+							"name": "Hire Freelancer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"profile\": 9,\r\n    \"workspace\": 14,\r\n    \"gig\": 2,\r\n    \"budget_type\": \"monthly_based\",\r\n    \"gig_package\": \"basic\",\r\n    \"rates\": 120.12,\r\n    \"timeline\": 12\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/gig/client/order/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"gig",
+										"client",
+										"order",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Workspace",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}api/gig/client/order/get_workspaces/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"gig",
+										"client",
+										"order",
+										"get_workspaces",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "Client",
+					"item": [
+						{
+							"name": "Workspace",
+							"item": [
+								{
+									"name": "workspace",
+									"item": [
+										{
+											"name": "Create Workspace",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"title\": \"Workspace 3\",\r\n    \"description\": \"Workspace 3 description\",\r\n    \"budget\": 3000\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/workspace/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"workspace",
+														""
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Update Workspace",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"title\": \"Job 4 title updated\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/workspace/5/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"workspace",
+														"5",
+														""
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Partial Update Workspace",
+											"request": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "JWT {{token}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"title\": \"Test title updated\",\r\n    \"description\": \"Test description updated\",\r\n    \"budget\": 1000\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/workspace/1/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"workspace",
+														"1",
+														""
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "List Workspaces",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/workspace/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"workspace",
+														""
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Get Workspace",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/workspace/39/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"workspace",
+														"39",
+														""
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Delete Workspace",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "JWT {{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/workspace/1/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"workspace",
+														"1",
+														""
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Job Posting",
+									"item": [
+										{
+											"name": "Create Post Job",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "title",
+															"value": "Job 22",
+															"type": "text"
+														},
+														{
+															"key": "description",
+															"value": "Job 22 desc",
+															"type": "text"
+														},
+														{
+															"key": "skills[0]title",
+															"value": "JavaScript",
+															"type": "text"
+														},
+														{
+															"key": "skills[0]category",
+															"value": "1",
+															"type": "text"
+														},
+														{
+															"key": "skills[0]sub_category",
+															"value": "1",
+															"type": "text"
+														},
+														{
+															"key": "skills[0]specializations[0]name",
+															"value": "specializations 1",
+															"type": "text"
+														},
+														{
+															"key": "skills[0]budget_type",
+															"value": "project_budget",
+															"type": "text"
+														},
+														{
+															"key": "skills[0]budget_amount",
+															"value": "1002",
+															"type": "text"
+														},
+														{
+															"key": "skills[0]timeline",
+															"value": "111",
+															"type": "text"
+														},
+														{
+															"key": "attachments[0]file",
+															"type": "file",
+															"src": [],
+															"disabled": true
+														},
+														{
+															"key": "attachments[1]file",
+															"type": "file",
+															"src": [],
+															"disabled": true
+														}
+													]
+												},
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/job/post/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"job",
+														"post",
+														""
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Update Post Job",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "title",
+															"value": "Job 22 updated",
+															"type": "text"
+														},
+														{
+															"key": "description",
+															"value": "Job 22 desc",
+															"type": "text"
+														},
+														{
+															"key": "skills[0]id",
+															"value": "38",
+															"type": "text",
+															"disabled": true
+														},
+														{
+															"key": "skills[0]title",
+															"value": "JavaScript",
+															"type": "text"
+														},
+														{
+															"key": "skills[0]category",
+															"value": "1",
+															"type": "text"
+														},
+														{
+															"key": "skills[0]sub_category",
+															"value": "1",
+															"type": "text"
+														},
+														{
+															"key": "skills[0]specializations[0]name",
+															"value": "specializations 2",
+															"type": "text"
+														},
+														{
+															"key": "skills[0]specializations[1]name",
+															"value": "specializations 2",
+															"type": "text"
+														},
+														{
+															"key": "skills[0]budget_type",
+															"value": "project_budget",
+															"type": "text"
+														},
+														{
+															"key": "skills[0]budget_amount",
+															"value": "1001",
+															"type": "text"
+														},
+														{
+															"key": "skills[0]timeline",
+															"value": "11",
+															"type": "text"
+														},
+														{
+															"key": "attachments[0]file",
+															"type": "file",
+															"src": "/C:/Users/Mg/Desktop/DRF Books/pic1.jpg"
+														},
+														{
+															"key": "attachments[1]file",
+															"type": "file",
+															"src": "/C:/Users/Mg/Desktop/DRF Books/pic2.jpg"
+														},
+														{
+															"key": "skills[1]id",
+															"value": "",
+															"type": "text",
+															"disabled": true
+														},
+														{
+															"key": "skills[1]title",
+															"value": "xyz",
+															"type": "text"
+														},
+														{
+															"key": "skills[1]category",
+															"value": "1",
+															"type": "text"
+														},
+														{
+															"key": "skills[1]sub_category",
+															"value": "1",
+															"type": "text"
+														},
+														{
+															"key": "skills[1]specializations[0]name",
+															"value": "asdsa",
+															"type": "text"
+														},
+														{
+															"key": "skills[1]specializations[1]name",
+															"value": "asdsa",
+															"type": "text"
+														},
+														{
+															"key": "skills[1]budget_type",
+															"value": "project_budget",
+															"type": "text"
+														},
+														{
+															"key": "skills[1]budget_amount",
+															"value": "1001",
+															"type": "text"
+														},
+														{
+															"key": "skills[1]timeline",
+															"value": "5",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/job/post/33/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"job",
+														"post",
+														"33",
+														""
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "List Job Posting",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/job/post/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"job",
+														"post",
+														""
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Get Job Posting",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "JWT {{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/job/post/8/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"job",
+														"post",
+														"8",
+														""
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Delete Job Posting",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/job/post/34/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"job",
+														"post",
+														"34",
+														""
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Recent Freelancers",
+									"item": [
+										{
+											"name": "List Recent Freelancers",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/workspace/recent/freelancers/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"workspace",
+														"recent",
+														"freelancers",
+														""
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Jobs List",
+									"item": [
+										{
+											"name": "New Request",
+											"request": {
+												"method": "GET",
+												"header": []
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Proposal List",
+									"item": [
+										{
+											"name": "Proposel List",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/workspace/proposals/list/?workspace=1",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"workspace",
+														"proposals",
+														"list",
+														""
+													],
+													"query": [
+														{
+															"key": "limit",
+															"value": "3",
+															"disabled": true
+														},
+														{
+															"key": "offset",
+															"value": "0",
+															"disabled": true
+														},
+														{
+															"key": "search",
+															"value": "skill name",
+															"disabled": true
+														},
+														{
+															"key": "workspace",
+															"value": "1"
+														},
+														{
+															"key": "budget_type",
+															"value": "project_budget",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Jobs List",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/workspace/jobs/list/?workspace=44",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"workspace",
+														"jobs",
+														"list",
+														""
+													],
+													"query": [
+														{
+															"key": "limit",
+															"value": "3",
+															"disabled": true
+														},
+														{
+															"key": "offset",
+															"value": "0",
+															"disabled": true
+														},
+														{
+															"key": "search",
+															"value": "skill name",
+															"disabled": true
+														},
+														{
+															"key": "workspace",
+															"value": "44"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Active Freelancer List",
+									"item": [
+										{
+											"name": "Active Freelancer List",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/workspace/freelancers/list/?workspace=1",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"workspace",
+														"freelancers",
+														"list",
+														""
+													],
+													"query": [
+														{
+															"key": "freelancer",
+															"value": "",
+															"disabled": true
+														},
+														{
+															"key": "workspace",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Job Offer Status",
+									"item": [
+										{
+											"name": "Job Offer Status",
+											"request": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"status\": \"in_progress\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/workspace/job/offer/155/status/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"workspace",
+														"job",
+														"offer",
+														"155",
+														"status",
+														""
+													],
+													"query": [
+														{
+															"key": "freelancer",
+															"value": "project_budget",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Custom job offer status accept",
+											"request": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMTcsInVzZXJuYW1lIjoiY2xpZW50IiwiZXhwIjoxNjcxMzUxNzAzLCJlbWFpbCI6InNoYW1hc0BnbWFpbC5jb20iLCJvcmlnX2lhdCI6MTY2ODc1OTcwM30.xvO-j6UO-TrIveT24bSf0JE6eIlQyFnj5NJuSqNkSr8",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"status\":\"withdrawn\",\n    \"workspace\":234\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/workspace/custom/job/offer/164/status/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"workspace",
+														"custom",
+														"job",
+														"offer",
+														"164",
+														"status",
+														""
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Tasks List",
+									"item": [
+										{
+											"name": "Tasks List",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/workspace/tasks/list/?workspace=234",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"workspace",
+														"tasks",
+														"list",
+														""
+													],
+													"query": [
+														{
+															"key": "workspace",
+															"value": "234"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Deliverables",
+									"item": [
+										{
+											"name": "Deliverables List",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/workspace/deliverable/list/?workspace=234",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"workspace",
+														"deliverable",
+														"list",
+														""
+													],
+													"query": [
+														{
+															"key": "workspace",
+															"value": "234"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Freelancer",
+					"item": [
+						{
+							"name": "Jobs List To Send Offer",
+							"item": [
+								{
+									"name": "Freelancer Jobs List",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/dashboard/freelancer/jobs/list/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"freelancer",
+												"jobs",
+												"list",
+												""
+											],
+											"query": [
+												{
+													"key": "limit",
+													"value": "3",
+													"disabled": true
+												},
+												{
+													"key": "offset",
+													"value": "3",
+													"disabled": true
+												},
+												{
+													"key": "search",
+													"value": "Job",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Freelancer Job Detail",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/dashboard/freelancer/job/25/details/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"freelancer",
+												"job",
+												"25",
+												"details",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Freelancer Job Offer Create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "profile",
+													"value": "8",
+													"type": "text"
+												},
+												{
+													"key": "job_skill",
+													"value": "66",
+													"type": "text"
+												},
+												{
+													"key": "gig",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "Offer 3 dec",
+													"type": "text"
+												},
+												{
+													"key": "budget_type",
+													"value": "project_budget",
+													"type": "text"
+												},
+												{
+													"key": "rates",
+													"value": "120",
+													"type": "text"
+												},
+												{
+													"key": "timeline",
+													"value": "5",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}api/dashboard/freelancer/job/offer/create/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"freelancer",
+												"job",
+												"offer",
+												"create",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Freelancer Sent Proposals",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/dashboard/freelancer/sent/offer/list/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"freelancer",
+												"sent",
+												"offer",
+												"list",
+												""
+											],
+											"query": [
+												{
+													"key": "limit",
+													"value": "3",
+													"disabled": true
+												},
+												{
+													"key": "offset",
+													"value": "3",
+													"disabled": true
+												},
+												{
+													"key": "search",
+													"value": "Job",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Freelancer Sent Proposals Detail",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/dashboard/freelancer/sent/offer/details/19/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"freelancer",
+												"sent",
+												"offer",
+												"details",
+												"19",
+												""
+											],
+											"query": [
+												{
+													"key": "limit",
+													"value": "3",
+													"disabled": true
+												},
+												{
+													"key": "offset",
+													"value": "3",
+													"disabled": true
+												},
+												{
+													"key": "search",
+													"value": "Job",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Workspace",
+							"item": [
+								{
+									"name": "Workspace list",
+									"item": [
+										{
+											"name": "Workspace List",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/freelancer/workspace/list/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"freelancer",
+														"workspace",
+														"list",
+														""
+													],
+													"query": [
+														{
+															"key": "status",
+															"value": "canceled",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Workspace Retrieve",
+									"item": [
+										{
+											"name": "Wrokspace Retrieve",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/freelancer/workspace/1/retrieve/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"freelancer",
+														"workspace",
+														"1",
+														"retrieve",
+														""
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Proposals List",
+									"item": [
+										{
+											"name": "Get Proposals",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/freelancer/workspace/proposals/list/?workspace=5",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"freelancer",
+														"workspace",
+														"proposals",
+														"list",
+														""
+													],
+													"query": [
+														{
+															"key": "status",
+															"value": "canceled",
+															"disabled": true
+														},
+														{
+															"key": "workspace",
+															"value": "5"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Tasks List",
+									"item": [
+										{
+											"name": "Tasks List",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/freelancer/workspace/tasks/list/?workspace=5",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"freelancer",
+														"workspace",
+														"tasks",
+														"list",
+														""
+													],
+													"query": [
+														{
+															"key": "workspace",
+															"value": "5"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Get Task",
+									"item": [
+										{
+											"name": "Get Task",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/freelancer/workspace/get/task/14/?task_via=job_offer",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"freelancer",
+														"workspace",
+														"get",
+														"task",
+														"14",
+														""
+													],
+													"query": [
+														{
+															"key": "task_via",
+															"value": "job_offer"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Deliverables",
+									"item": [
+										{
+											"name": "Deliverables List",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{domain}}api/dashboard/freelancer/workspace/deliverable/list/?workspace=234",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"freelancer",
+														"workspace",
+														"deliverable",
+														"list",
+														""
+													],
+													"query": [
+														{
+															"key": "workspace",
+															"value": "234"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Single Task For Both",
+					"item": [
+						{
+							"name": "Change Term Request",
+							"item": [
+								{
+									"name": "Client Change Term Request Status",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"status\": \"accepted\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/dashboard/client/change/term/request/status/21/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"client",
+												"change",
+												"term",
+												"request",
+												"status",
+												"21",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Freelancer Terms Change Request",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"job_offer_task\": 14,\r\n    \"rates\": 100,\r\n    \"timeline\": 10\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/dashboard/freelancer/change/terms/request/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"freelancer",
+												"change",
+												"terms",
+												"request",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Client List Terms Change Request",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"job_offer_task\": 10,\r\n    \"client_order_task\": 9,\r\n    \"rates\": 1001,\r\n    \"timeline\": 10\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/dashboard/client/list/change/terms/request/?task_id=94&task_via=direct_hire",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"client",
+												"list",
+												"change",
+												"terms",
+												"request",
+												""
+											],
+											"query": [
+												{
+													"key": "task_id",
+													"value": "94"
+												},
+												{
+													"key": "task_via",
+													"value": "direct_hire"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Refund Request",
+							"item": [
+								{
+									"name": "Client Change Term Request Status",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"status\": \"accepted\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/dashboard/client/change/term/request/status/48/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"client",
+												"change",
+												"term",
+												"request",
+												"status",
+												"48",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Freelancer Refund Request",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"client_order_task\": 9,\r\n    \"amount\": 1001\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/dashboard/freelancer/refund/request/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"freelancer",
+												"refund",
+												"request",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Client List Refund Request",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"job_offer_task\": 10,\r\n    \"client_order_task\": 9,\r\n    \"rates\": 1001,\r\n    \"timeline\": 10\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/dashboard/client/list/change/terms/request/?task_id=9&task_via=direct_hire",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"client",
+												"list",
+												"change",
+												"terms",
+												"request",
+												""
+											],
+											"query": [
+												{
+													"key": "task_id",
+													"value": "9"
+												},
+												{
+													"key": "task_via",
+													"value": "direct_hire"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Task Delivery",
+							"item": [
+								{
+									"name": "List Task Delivery Requests",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/dashboard/list/task/delivery/requests/?task_via=job_offer&task_id=14",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"list",
+												"task",
+												"delivery",
+												"requests",
+												""
+											],
+											"query": [
+												{
+													"key": "task_via",
+													"value": "job_offer"
+												},
+												{
+													"key": "task_id",
+													"value": "14"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Freelancer Task Delivery Request",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "remarks",
+													"value": "remarks 1",
+													"type": "text"
+												},
+												{
+													"key": "client_order_task",
+													"value": "130",
+													"type": "text"
+												},
+												{
+													"key": "attachments[0]file",
+													"type": "file",
+													"src": "/home/sameer/Downloads/Asset 1.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}api/dashboard/freelancer/task/delivery/request/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"freelancer",
+												"task",
+												"delivery",
+												"request",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Task Delivery Revision",
+							"item": [
+								{
+									"name": "Client",
+									"item": [
+										{
+											"name": "Revision Requests",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "task_deliverable",
+															"value": "89",
+															"type": "text"
+														},
+														{
+															"key": "remarks",
+															"value": "remarks 1",
+															"type": "text"
+														},
+														{
+															"key": "attachments[0]file",
+															"type": "file",
+															"src": "/home/bes/Pictures/Screenshots/Screenshot from 2022-11-16 14-01-24.png"
+														},
+														{
+															"key": "attachments[1]file",
+															"type": "file",
+															"src": "/home/bes/Pictures/Screenshots/Screenshot from 2022-11-18 16-36-35.png"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{domain}}api/dashboard/client/revision/request/",
+													"host": [
+														"{{domain}}api"
+													],
+													"path": [
+														"dashboard",
+														"client",
+														"revision",
+														"request",
+														""
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Client Accept Delivery Request",
+							"item": [
+								{
+									"name": "Client Accept Delivery Request",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/dashboard/client/accept/delivery/request/90/?task_via=job_offer",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"client",
+												"accept",
+												"delivery",
+												"request",
+												"90",
+												""
+											],
+											"query": [
+												{
+													"key": "task_via",
+													"value": "job_offer"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Give Freelancer Feedback",
+							"item": [
+								{
+									"name": "Give Freelancer Feedback",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"job_offer_task\": 12,\r\n    \"tip\": 10,\r\n    \"rating\": 3.5,\r\n    \"description\": \"test description\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/dashboard/give/freelancer/feedback/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"give",
+												"freelancer",
+												"feedback",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Give Client Feedback",
+							"item": [
+								{
+									"name": "Give Client Feedback",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"job_offer_task\": 12,\r\n    \"tip\": 10,\r\n    \"rating\": 3.5,\r\n    \"description\": \"test description\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/dashboard/give/client/feedback/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"give",
+												"client",
+												"feedback",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Task Details",
+							"item": [
+								{
+									"name": "Task Detail",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/dashboard/workspace/task/details/?task_via=job_offer&task_id=14",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"dashboard",
+												"workspace",
+												"task",
+												"details",
+												""
+											],
+											"query": [
+												{
+													"key": "task_via",
+													"value": "job_offer"
+												},
+												{
+													"key": "task_id",
+													"value": "14"
+												},
+												{
+													"key": "task_via",
+													"value": "direct_hire",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "freelancer progress bar",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}api/dashboard/freelancer/progress/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"dashboard",
+										"freelancer",
+										"progress",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "Group Chat",
+					"item": [
+						{
+							"name": "List Rooms",
+							"item": [
+								{
+									"name": "List All Rooms",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/chat/get/all/rooms/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"chat",
+												"get",
+												"all",
+												"rooms",
+												""
+											],
+											"query": [
+												{
+													"key": "search",
+													"value": "s",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Create Room",
+							"item": [
+								{
+									"name": "Create Room",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"owner\": 13,\r\n    \"partner\": 15\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/chat/create/room/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"chat",
+												"create",
+												"room",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Update online status",
+							"item": [
+								{
+									"name": "update online status",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMTcsInVzZXJuYW1lIjoiY2xpZW50IiwiZXhwIjoxNjcxMzUxNzAzLCJlbWFpbCI6InNoYW1hc0BnbWFpbC5jb20iLCJvcmlnX2lhdCI6MTY2ODc1OTcwM30.xvO-j6UO-TrIveT24bSf0JE6eIlQyFnj5NJuSqNkSr8",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"is_online\":false\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}api/chat/update/online/status/",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"chat",
+												"update",
+												"online",
+												"status",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Private Chat",
+					"item": [
+						{
+							"name": "Room Previous Chat",
+							"item": [
+								{
+									"name": "Get Room Previous Chat",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{domain}}api/chat/get/room/5/previous/chat/?limit=50&offset=0",
+											"host": [
+												"{{domain}}api"
+											],
+											"path": [
+												"chat",
+												"get",
+												"room",
+												"5",
+												"previous",
+												"chat",
+												""
+											],
+											"query": [
+												{
+													"key": "limit",
+													"value": "50"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Send Attachments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Haseeb/Documents/RAW DATA/WORLD TOURISM DAY/world icon.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}api/chat/create/attachment/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"chat",
+								"create",
+								"attachment",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "Paypal Payment",
+					"item": [
+						{
+							"name": "create paypal payment",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"paypal_payment_id\":\"dssadsds\",\n    \"job_offer_id\":12\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/payments/create/paypal/payment/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"payments",
+										"create",
+										"paypal",
+										"payment",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Stripe payment",
+					"item": [
+						{
+							"name": "confirm job offer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"payment_intent_id\":\"\",\n    \"job_offer_id\":164,\n    \"task_via\":\"job_offer\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/payments/confirm/stripe/payment/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"payments",
+										"confirm",
+										"stripe",
+										"payment",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create stripe payment",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"check\":\"client_order\", // clent_order & job_offer\n    \"amount\":1200,\n    \"currency\":\"usd\",\n    \"payment_method_id\":\"card\",\n    \"job_offer_id\":12\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/payments/create/stripe/payment/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"payments",
+										"create",
+										"stripe",
+										"payment",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create stripe payment Intent",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"check\":\"client_order\", // clent_order & job_offer\n    \"amount\":1200,\n    \"currency\":\"usd\",\n    \"payment_method_id\":\"card\",\n    \"job_offer_id\":12\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}api/create/payment/intents/",
+									"host": [
+										"{{domain}}api"
+									],
+									"path": [
+										"create",
+										"payment",
+										"intents",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "update paymentMethod",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"card\": {\n        \"exp_month\": 12,\n        \"exp_year\": 12\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}api/payments/update/payment/method/?id=asd",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"payments",
+								"update",
+								"payment",
+								"method",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "asd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "anyalatic balance details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}api/payments/get/total/earning/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"payments",
+								"get",
+								"total",
+								"earning",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkout payments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{domain}}api/payments/get/checkout/164/?task_via=job_offer",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"payments",
+								"get",
+								"checkout",
+								"164",
+								""
+							],
+							"query": [
+								{
+									"key": "task_via",
+									"value": "job_offer"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "card details",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"payment_method_id\":\"pm_id\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}api/payments/create/payment/method/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"payments",
+								"create",
+								"payment",
+								"method",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "card details Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}api/payments/delete/payment/method?id=asdasd",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"payments",
+								"delete",
+								"payment",
+								"method"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "asdasd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List card details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}api/payments/get/payment/methods/list/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"payments",
+								"get",
+								"payment",
+								"methods",
+								"list",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get card details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}api/payments/get/payment/method/?payment_method_id=sasasas",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"payments",
+								"get",
+								"payment",
+								"method",
+								""
+							],
+							"query": [
+								{
+									"key": "payment_method_id",
+									"value": "sasasas"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "card details",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"card_id\":\"asaadsfgsasa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}api/payments/card/details/10/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"payments",
+								"card",
+								"details",
+								"10",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create payment intent",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "notifications",
+			"item": [
+				{
+					"name": "get notification details api",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}api/notification/list/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"notification",
+								"list",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "notification update status",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"is_delete\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}api/notification/update/2/",
+							"host": [
+								"{{domain}}api"
+							],
+							"path": [
+								"notification",
+								"update",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1OCwidXNlcm5hbWUiOiJoYXNlZWJfYWhtZWQiLCJleHAiOjE2NjU0MjA5MzQsImVtYWlsIjoiaGFzZWViQGJleW9uZGVyaXNzb2x1dGlvbnMuY29tIiwib3JpZ19pYXQiOjE2NjI4Mjg5MzR9.3Ky-k66jzlgHQOAiFpSlvq-UmCIZXLDuzIZafCSI1o4",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
