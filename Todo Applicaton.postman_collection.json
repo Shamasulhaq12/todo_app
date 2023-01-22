@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "fdab4a95-a6dc-428c-bdf9-86d493d4643b",
+		"name": "Todo Applicaton",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19807709"
+	},
+	"item": [
+		{
+			"name": "get tasks list",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "admin123",
+						"username": "Shamas"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:5000/tasks/"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrive Task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:5000/task/7/"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:5000/task/7/"
+			},
+			"response": []
+		},
+		{
+			"name": "Post Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"create todo app\",\n    \"description\":\"create a todo app using flask, sqlalchemy basic auth \"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:5000/tasks/"
+			},
+			"response": []
+		},
+		{
+			"name": "update task",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"title\":\"create todo app\",\n    \"description\":\"create a todo app using flask, sqlalchemy basic auth \",\n    \"status\":\"in_progress\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:5000/task/7/"
+			},
+			"response": []
+		}
+	]
+}
