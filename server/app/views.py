@@ -9,8 +9,8 @@ from flask_restful import Resource, reqparse
 from werkzeug.security import generate_password_hash, check_password_hash
 
 
-KEY=str(os.getenv('ALGO'))
-load_dotenv('app/.env')
+KEY=str(os.getenv('KEY'))
+load_dotenv('../.env')
 
 users = {
     "Shamas": generate_password_hash("admin123"),
