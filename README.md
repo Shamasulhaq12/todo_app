@@ -3,27 +3,26 @@
 Information about the application
 
 **1:** Install Python 3.10 on your Machine
-
-
 **2:** Install venv using thw following command in shell
        (`pip install venv`)
 
 **3:** clone the project from git repository
 
 **4:** after cloning the project from repository activate virtual environment
-
-and install requirements that contains requirements.txt
+install pipenv for creating the virtual environment
+use command `pip install pipenv` after installing the pipenv
+create the virtual environment with pipenv
 
 by using the following command:
-(`pipe install -r requirements.txt`)
+(`pipenv install`)
 
 **5:** after installing requirements rename the .env_sample file into .env file
 or run following commands
-python main.py
+go in the server directory and run command (`flask run`)
 
-for the Decryption of the Respone 
+for the Decryption of the Respone
 code is givien:
-(` <html lang="en">
+(`<html lang="en">
         <body>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
             <script>
@@ -38,3 +37,5 @@ code is givien:
             </script>
         </body>
     </html>`)
+
+decryption function is also available in app/utils.py decrypt_js(key, decrypted)
