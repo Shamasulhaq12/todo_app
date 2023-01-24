@@ -13,3 +13,21 @@ def encrypt(key, data):
 def decrypt(key, data):
     cipher = AES.new(key.encode('utf-8'), AES.MODE_ECB)
     return unpad(cipher.decrypt(base64.b64decode(data)), AES.block_size).decode('utf-8')
+
+def decrypt_js(key,data):
+    # <html lang="en">
+    #     <body>
+    #         <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    #         <script>
+    #         var encrypted =
+    #             "SWBoEbQmmNXQCntYDW0foClQC1kO2khFzyLygn63nh2jsPNJw0+Cc6RcdTFMpZgiXR4LPfPj7lpGflT5BopnWf2qn6rywWmuF1i7GHskcI4="
+    #         var key = "AAAAAAAAAAAAAAAA"; //key used in Python
+    #         key = CryptoJS.enc.Utf8.parse(key);
+    #         var decrypted = CryptoJS.AES.decrypt(encrypted, key, {
+    #             mode: CryptoJS.mode.ECB,
+    #         });
+    #         console.log(decrypted.toString(CryptoJS.enc.Utf8));
+    #         </script>
+    #     </body>
+    # </html>`)
+    pass

@@ -16,3 +16,17 @@ class Task(db.Model):
     def __repr__(self):
         """Return a string representation of the task."""
         return f"Task('{self.title}', '{self.description}', '{self.status}')"
+
+
+class User(db.Model):
+    """User model."""
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(100), nullable=False, unique=True)
+    email = db.Column(db.String(100), nullable=False, unique=True)
+    password = db.Column(db.String(100), nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def __repr__(self):
+        """Return a string representation of the user."""
+        return f"User('{self.username}', '{self.email}')"

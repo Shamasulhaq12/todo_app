@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+pymysql = "*"
+pyyaml = "*"
+flask-sqlalchemy = "*"
+flask-api = "*"
+pylint = "*"
+pycryptodome = "*"
+python-dotenv = "*"
+flask-httpauth = "*"
+flask-restful = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "*"
